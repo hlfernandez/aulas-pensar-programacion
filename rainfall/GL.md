@@ -52,6 +52,8 @@ O obxectivo é que enpreguen a superficie vertical para simular o procesamento q
 - Cando teñen que parar?
 - Como calculan a media?
 
+E incluso dicirlles que no grupo unha persoa tome o rol de "cantar os números" (sería a entrada) e outro fai o procesamento (e por tanto fai anotacións no taboleiro).
+
 Algúns erros esperables son que esquezan cantos números levan lidos, incluír o sentinela por erro ou non saber que facer se non teñen datos válidos. Sen dar solucións e deixando que pensen, o profesor segue circulando e pode lanzar preguntas como:
 
 - "Cando vos dades conta de que chegou o 99999?"
@@ -136,17 +138,44 @@ O obxectivo que é que cada grupo revise o seu algoritmo e anote **que cambios**
 
 As reflexións clave que deben facer son:
 
-> Que un programa robusto ten que contemplar o inesperado.
+- Que un programa robusto ten que contemplar o inesperado.
 > Que cousas non estaban previstas ao comezo?
 
 
 #### Fase 6: Implementación e proba (individual)
 
-Transcorridas as fases anteriores, cun tempo estimado duns 70', a última fase consiste en pedirlle ao alumnado que faga unha implementación de xeito individual. Con sesións de laboratorio de 2 horas, sería posible deixarlles o resto de tempo da sesión para que fagan esta tarefa. Alternativamente, tamén é posible pedirlles que fagan esta parte como traballo autónomo fóra da aula.
+- Tempo estimado: 40'
+
+Transcorridas as fases anteriores, cun tempo estimado duns 70', esta fase consiste en pedirlle ao alumnado que faga unha implementación de xeito individual. Con sesións de laboratorio de 2 horas, sería posible deixarlles o resto de tempo da sesión para que fagan esta tarefa. Alternativamente, tamén é posible pedirlles que fagan esta parte como traballo autónomo fóra da aula.
+
+#### Fase 7: Reflexión metacognitiva
+
+- Tempo estimado**: 10' (en grupo) ou individual (fóra da aula)
+
+Esta fase de peche permite que o alumnado tome consciencia do seu propio proceso de aprendizaxe. O obxectivo é que o alumno poña de manifesto o aprendido non só sobre o problema en sí, senón tamén sobre **como pensa cando resolve problemas**, de xeito que sexa capaz de identificar os seus propios puntos fortes e áreas de mellora. Dependendo de se a implementación realízase en aula ou fóra dela, esta reflexión pode ser grupal ou individual.
+
+Na aula, o docente reúne de novo aos grupos ou á clase completa para unha conversa guiada sobre o proceso completo. Algunhas preguntas clave:
+
+- **Sobre o proceso de pensamento:**
+  - "Que foi o máis difícil de pensar neste problema?"
+  - "En que momento vos 'cadrou' o problema? Que foi o 'clic'?"
+  - "Que descubristes que non sabías ao comezo?"
+
+- **Sobre a brecha entre pensar e codificar:**
+  - "Houbo diferenzas entre o que pensabades que funcionaría e o que realmente funcionou ao programar?"
+  - "Que erros vos sorprenderon ao implementar?"
+  - "Algo que vos parecía sinxelo resultou ser complicado? Por que?"
+
+- **Sobre aprendizaxes transferibles:**
+  - "Que estratexia ou idea deste problema poderiades usar noutros?"
+  - "Se tivésedes que explicarlle a alguén a parte máis importante, cal sería?"
+
+Se a implementación é realizada fóra da aula, podería facerse a reflexión anterior ao comezo da seguinte sesión ou ben pedirlles unha breve reflexión escrita (5-10 liñas) que acompañe ao código entregado, respondendo a 2-3 das preguntas anteriores. Isto axuda a consolidar o aprendido e proporciona información valiosa ao docente sobre as dificultades reais do alumnado.
 
 ### Posibles ampliacións
 
 Pequenas ampliacións que se poderían facer:
+- Escoller outro sentinela.
 - Mostrar tamén o máximo e mínimo
 - Permita múltiples conxuntos de datos (reiniciar tras 99999)
 - Obter os datos dun ficheiro ou pasarllos nunha lista ou array.
