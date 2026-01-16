@@ -1,8 +1,10 @@
-# Conversión de unidades
+## Conversión de unidades
 
 Esta proposta de tarefa ten como obxectivo que o alumnado acade o deseño dun programa para comparar tamaños de almacenamento expresados con unidades distintas.
 
 A nivel de pensamento, a principal cuestión é como facer comparables as distintas unidades e o máis habitual é convertelas a unha unidade común na que facer as comparacións. A nivel técnico, o reto fundamental estará no procesamento de cadenas. Poden emerxer solucións máis orientadas á división do código en funcións ou outras que empregen mapas para almacenar as conversións de unidades básicas.
+
+### Desenvolvemento da sesión
 
 #### Fase 1: Activación e exploración do enunciado
 
@@ -93,7 +95,6 @@ PROGRAMA comparar_unidades
   SAÍDA: resultado
 ```
 
-
 #### Fase 5: Deseño das funcións
 
 - **Tempo estimado**: 15'
@@ -145,7 +146,8 @@ Se a implementación é realizada fóra da aula, podería facerse a reflexión a
 ### Posibles ampliacións
 
 Pequenas ampliacións que se poderían facer:
-- Analizar a robustez do programa (que pasa con valores como `'1024 MiB''' ou `'1024mib'`).
+
+- Analizar a robustez do programa (que pasa con valores como `'1024 MiB'` ou `'1024mib'`).
 - Modificar o programa para soportar valores decimais (como 1.5GiB, 2.3MiB, etc.).
 - Pedirlles que inclúan unidades do sistema internacional (KB, MB, GB, etc.).
 - Pedirlles que escriban un pequeno programa en liña de comandos para converter valores dunha unidade a outra. Deste xeito poderán ver como reutilizar funcións para outras finalidades.
