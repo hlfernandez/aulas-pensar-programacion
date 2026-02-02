@@ -148,7 +148,7 @@ Se a implementación é realizada fóra da aula, podería facerse a reflexión a
 Pequenas ampliacións que se poderían facer:
 
 - Analizar a robustez do programa (que pasa con valores como `'1024 MiB'` ou `'1024mib'`).
-- Modificar o programa para soportar valores decimais (como 1.5GiB, 2.3MiB, etc.).
+- Modificar o programa para soportar valores decimais (como `'1.5GiB'`, `'2.3MiB'`, etc.).
 - Pedirlles que inclúan unidades do sistema internacional (KB, MB, GB, etc.).
 - Pedirlles que escriban un pequeno programa en liña de comandos para converter valores dunha unidade a outra. Deste xeito poderán ver como reutilizar funcións para outras finalidades.
 - Pedirlles que escriban un programa que lea un ficheiro cunha lista de unidades (unha por liña) e produzan a lista ordenada utilizando a función de comparación.
