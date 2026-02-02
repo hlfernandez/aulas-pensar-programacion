@@ -1,8 +1,10 @@
 ## Conversión de unidades
 
-Esta proposta de tarefa ten como obxectivo que o alumnado acade o deseño dun programa para comparar tamaños de almacenamento expresados con unidades distintas.
+Esta proposta de tarefa ten como obxectivo que o alumnado desenvolva un programa para comparar tamaños de almacenamento expresados con unidades distintas.
 
-A nivel de pensamento, a principal cuestión é como facer comparables as distintas unidades e o máis habitual é convertelas a unha unidade común na que facer as comparacións. A nivel técnico, o reto fundamental estará no procesamento de cadenas. Poden emerxer solucións máis orientadas á división do código en funcións ou outras que empregen mapas para almacenar as conversións de unidades básicas.
+A nivel de pensamento, a principal cuestión é como facer comparables as distintas unidades e o máis habitual é convertelas a unha unidade común na que facer as comparacións.
+
+A nivel técnico, o reto fundamental estará no procesamento de cadenas. Poden emerxer solucións máis orientadas á división do código en funcións ou outras que empregen mapas para almacenar as conversións de unidades básicas.
 
 ### Desenvolvemento da sesión
 
@@ -27,79 +29,39 @@ Dividimos ao alumnado en grupos visiblemente aleatorios e lanzamos o reto, *como
 1GiB   ?  1024MiB
 ```
 
-#### Fase 2: Simulación manual
+#### Fase 2: Análise do proceso
 
 - **Tempo estimado**: 20'
 
-O obxectivo é que o grupo identifique os pasos que debe seguir o programa para cada comparación, tratando de facer o proceso o máis explícito posible. Nesta fase non se permitirá escribir código, tan só pseudocódigo ou debuxos.
+O obxectivo é que o grupo identifique os pasos que debe seguir o programa para cada comparación, tratando de facer o proceso o máis explícito posible. É importante indicar que nesta fase **non se permite escribir código**, só linguaxe natural, pseudocódigo ou debuxos que expresen o proceso computaciona (por exemplo, para desenvolver os casos de proba anteriores).
 
-Ao observar como avanxan no pensamento, o profesorado pode ir facendo as seguintes preguntas para fomentar o pensamento:
+Ao observar como avanzan no pensamento, o profesorado pode ir facendo as seguintes preguntas para fomentar o pensamento:
 
 - Que datos de entrada ten o programa?
 - Como se vai a especificar o resultado? 
 - Que información hai dentro dunha cadea como `1024MiB` e como a obtemos?
 - Hai algo que teña que pasar sempre antes de comparar?
 
-En xeral, nesta fase debería emerxer o fluxo de **extraer** (separar a cadea en valor e unidades), **transformar** (a unha unidade común ou dunha unidade á outra) e **comparar** (xa só queda comparar entre bytes para devolver -1, 0 ou 1, en función de se o primeiro é menor, se son iguais, ou se o segundo é maior).
+En xeral, nesta fase debería emerxer o fluxo de **extraer** (separar a cadea en valor e unidades), **transformar** (a unha unidade común ou dunha unidade á outra) e **comparar** (xa só queda comparar entre bytes para devolver -1, 0 ou 1, en función de se o primeiro é menor, se son iguais, ou se o segundo é maior, ou imprimir unha mensaxe por consola, a elección máis habitual).
 
-#### Fase 3: Posta en común e identificación de patróns
+#### Fase 3: Posta en común
 
-- **Tempo estimado**: 15'
+- **Tempo estimado**: 10'
 
-Nesta fase trátase de pór en común o proceso co obxectivo de verbalizalo e identificar elementos comúns.
+Nesta fase trátase de verbalizar o proceso e identificar elementos comúns entre os grupos.
 
-Pode comezarse por convidar a cada grupo a compartir brevemente a súa estratexia (2'), de xeito que o docente vai **extraendo patróns comúns** e escribíndoos nun taboleiro libre. Deste xeito acaba aparecendo a estrutura comentada na fase anterior. Poden existir dúas variantes:
+O docente convida a cada grupo a compartir brevemente a súa estratexia, **extraendo patróns comúns** e escribíndoos no taboleiro. Deste xeito acaba aparecendo a estrutura comentada na fase anterior. Poden existir dúas variantes:
 
 1. Converter ambos valores a unha unidade común (p. ex.: bytes).
 2. Converter un valor ás unidades do outro de xeito que sexan comparables.
 
 Nesta fase o docente fai fincapé na separación de responsabilidades así coma no concepto de **abstracción**.
 
-#### Fase 4: Construción do algoritmo
+#### Fase 4: Deseño das funcións
 
 - **Tempo estimado**: 15'
 
-Nesta fase o docente indicará aos grupos que formalicen o pensamento en pasos concretos, é dicir, que produzan un algoritmo.
-
-Este algoritmo poden facelo empregando linguaxe natural, pseudocódigo ou mesmo un diagrama de fluxo. O importante é que fagan explícito o progreso sen empregar inda unha linguaxe de programación. Farase fincapé na creación de subrutinas, de xeito que o programa principal manteña o foco na especificación de alto nivel.
-
-Por exemplo:
-
-```
-SUBRUTINA extraer
-  ENTRADA: cadea
-  PROCESO:
-    Separar cadea en valor_numérico e unidades
-  SAÍDA: (valor_numérico, unidades)
-
-SUBRUTINA converter_a_bytes
-  ENTRADA: valor, unidades
-  PROCESO:
-    Buscar factor de conversión para unidades
-    Calcular valor × factor
-  SAÍDA: resultado_en_bytes
-
-PROGRAMA comparar_unidades
-  ENTRADA: cadea1, cadea2
-  PROCESO:
-    (v1, u1) ← extraer(cadea1)
-    (v2, u2) ← extraer(cadea2)
-    bytes1 ← converter_a_bytes(v1, u1)
-    bytes2 ← converter_a_bytes(v2, u2)
-    SE bytes1 < bytes2 ENTÓN
-      resultado ← -1
-    SE NON SE bytes1 = bytes2 ENTÓN
-      resultado ← 0
-    SE NON
-      resultado ← 1
-  SAÍDA: resultado
-```
-
-#### Fase 5: Deseño das funcións
-
-- **Tempo estimado**: 15'
-
-Nesta fase pedirase a cada grupo que identifique as funcións e os tipos de datos involucrados en cada un dos pasos do algoritmo obtido na fase 4. O obxectivo é que reflexionen sobre que funcións crearán, que parámetros de entrada e saída terán, e como as invocarán desde o programa xeral.
+Nesta fase pedirase a cada grupo que identifique as **funcións** e os tipos de datos involucrados en cada paso. O obxectivo é que reflexionen sobre que funcións crearán, que parámetros de entrada e saída terán (cos seus tipos), e como as invocarán desde o programa xeral.
 
 Ao ver como traballan, é preciso supervisar que reflexionan sobre:
 
@@ -107,19 +69,20 @@ Ao ver como traballan, é preciso supervisar que reflexionan sobre:
 - Conversión: a conversión pode facerse con funcións separadas ou empregando diccionarios.
 - Resultado: ata agora pode que non se fixese explícito como se vai devolver o resultado, pero un booleano non é suficiente para devolver menor, igual ou maior, así que terán que codificalo dalgún xeito.
 
-Por tanto, poden formularse preguntas coma:
+Por tanto, para guiar ao alumnado, poden facerse preguntas como estas:
 
-- Como separamos a cadea nas dúas partes? É dicir: "1024MiB" → (1024, "MiB").
-- Que tipo de datos manexa cada paso?
-- Como imos codificar o resultado que se devolve?
+- Que devolve `extraer('1024MiB')`? É unha tupla? Que contén?
+- Como representades un par (valor, unidade)?
+- Necesitades un diccionario para as conversións de unidades? Que estrutura de selección usades?
+- Como indicades o resultado da comparación?
 
-#### Fase 6: Implementación e proba (individual)
+#### Fase 5: Implementación e proba
 
-- **Tempo estimado**: 40'
+- **Tempo estimado**: 25'
 
-Transcorridas as fases anteriores, cun tempo estimado duns 70', esta fase consiste en pedirlle ao alumnado que faga unha implementación de xeito individual. Con sesións de laboratorio de 2 horas, sería posible deixarlles o resto de tempo da sesión para que fagan esta tarefa. Alternativamente, tamén é posible pedirlles que fagan esta parte como traballo autónomo fóra da aula.
+Implementación individual do programa baseándose no deseño previo das funcións. A maioría do alumnado debería ter unha solución funcional neste tempo, xa que o traballo de análise e deseño previo facilita moito a codificación.
 
-#### Fase 7: Reflexión metacognitiva
+#### Fase 6: Reflexión metacognitiva
 
 - **Tempo estimado**: 10' (en grupo) ou individual (fóra da aula)
 
