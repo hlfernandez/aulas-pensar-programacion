@@ -11,6 +11,7 @@ Conxunto de actividades deseñadas para promover o pensamento algorítmico e a r
 | Actividade | Descrición | Recursos |
 |---|---|---|
 | [Comparación de Unidades](comparacion_unidades/GL.md) | Deseño dun programa para comparar tamaños de almacenamento expresados con unidades distintas. Traballa a conversión de unidades e a separación de responsabilidades en funcións. | [GL.md](comparacion_unidades/GL.md) |
+| [De ler a indexar](indice_ficheiro/GL.md) | Resolución do problema de acceso a filas dun ficheiro CSV a partir dun identificador. Introduce complexidade temporal (O(n) vs O(1)) e estruturas de datos (índices con dicionarios). | [GL.md](indice_ficheiro/GL.md) |
 | [Rainfall (Problema da Choiva)](rainfall/GL.md) | Clásico problema de cálculo de medias que revela dificultades cognitivas fundamentais no pensamento algorítmico: condicións de parada, sentinelas, acumulación e xestión de casos extremos. | [GL.md](rainfall/GL.md) |
 | [StringBuilder](string_builder/GL.md) | Deseño dunha clase `StringBuilder` para construír cadeas de texto de forma eficiente. Traballa encapsulación, deseño de APIs e inmutabilidade vs mutabilidade. | [GL.md](string_builder/GL.md) |
 

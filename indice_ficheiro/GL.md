@@ -4,7 +4,7 @@
 
 Esta proposta de tarefa ten como obxectivo que o alumnado resolva o problema de acceder a unha fila dun ficheiro CSV a partir do valor dunha columna (un identificador).
 
-A nivel de pensamento, a principal cuestión é como atopar a fila asociada ao identificador proporcionado: isto pode resolverse dun xeito ou outro en función de se o ficheiro está ordenado por esa columna (busca binaria) ou non (busca secuencial). Afrontarse a este problema permitirá introducir o concepto de complexidade temporal. Tras as primeiras solucións, encamiñarase a tarefa á creación dun índice que permita acceder en tempo constante (*O(1)*) á fila seleccionada.
+A nivel de pensamento, a principal cuestión é como atopar a fila asociada ao identificador proporcionado: isto pode resolverse dun xeito ou outro en función de se o ficheiro está ordenado por esa columna (busca binaria) ou non (busca secuencial). Afrontarse a este problema permitirá introducir o concepto de complexidade temporal. Tras as primeiras solucións, encamiñarase a tarefa á creación dun índice que permita acceder en tempo constante (O(1)) á fila seleccionada.
 
 A nivel técnico, o alumnado debe estar familiarizado co procesamento de ficheiros (acceso secuencial) e dicionarios, o cal permitiralles afrontar a creación do índice e un posterior acceso directo ao ficheiro.
 
@@ -57,7 +57,7 @@ O obxectivo nesta fase é que cada grupo atope algúns IDs concretos no CSV. Por
 - 125 (Patricia Vázquez) ao final
 - 130 ID inexistente (para provocar reflexión sobre condicións de parada)
 
-Coma de costume, çe importante indicar que nesta fase **non se permite escribir código**, só linguaxe natural, pseudocódigo ou debuxos que expresen o proceso computacional (por exemplo, para desenvolver os casos de proba anteriores).
+Como de costume, é importante indicar que nesta fase **non se permite escribir código**, só linguaxe natural, pseudocódigo ou debuxos que expresen o proceso computacional (por exemplo, para desenvolver os casos de proba anteriores).
 
 Ao observar como avanzan no pensamento, o profesorado pode ir facendo as seguintes preguntas para fomentar o pensamento:
 
@@ -78,9 +78,9 @@ O importante é que emerxa a noción de lectura secuencial e o custo *O(n)* de b
 
 Se xorde o feito de que o ficheiro está ordenado pode aproveitarse para introducir a busca binaria e o número de comparacións requirido para elo.
 
-Tras esta posta en común, o docente trata de que emerxa a idea de crear un índice e o salto conceptual cara ao acceso *O(1)*. É posible que sexa necesario repasar que é posible acceder directamente a un ficheiro, en contraste co acceso secuencial máis comúm en cursos introdutorios de programación.
+Tras esta posta en común, o docente trata de que emerxa a idea de crear un índice e o salto conceptual cara ao acceso O(1). É importante que o alumnado comprenda que é posible acceder directamente a un rexistro dun ficheiro, en contraste co acceso secuencial.
 
-### Fase 4: Deseño do índice
+#### Fase 4: Deseño do índice
 
 - **Tempo estimado**: 15'
 
@@ -91,7 +91,7 @@ Nesta fase afóndase na conexión entre o proceso manual e a noción de complexi
 - Que estruturas de datos coñecidas deberían empregarse para isto?
 - Canto tempo require a creación do índice e o posterior acceso?
 
-#### Fase 4: Segunda posta en común
+#### Fase 5: Segunda posta en común
 
 - **Tempo estimado**: 10'
 
@@ -103,7 +103,7 @@ Nesta segunda posta en común o docente asegúrase de que o alumnado entende os 
 
 Pode axudar o emprego dunha metáfora e asemellar o proceso ao índice dun libro: nel é posible ir páxina por páxina ata atopar o tema que buscan (*O(n)*, onde *n* é o número de páxinas), ou ben consultar o índice alfabético ao final, que indica directamente en que páxina está (*O(1)*).
 
-### Fase 5: Deseño do fluxo
+#### Fase 6: Deseño do fluxo
 
 - **Tempo estimado**: 15'
 
@@ -113,13 +113,17 @@ Nesta fase o docente pedirá ao alumnado que debuxe o proceso completo: que ocor
 - `crear_indice(lista) → dict_id_a_posicion`
 - `buscar_por_id(id, indice) → liña`
 
-#### Fase 6: Implementación e proba
+De forma xeral, o esquema do programa sería o seguinte.
+
+![Esquema do deseño da sesión](esquema.png)
+
+#### Fase 7: Implementación e proba
 
 - **Tempo estimado**: 20'
 
 Nesta fase realizarase unha implementación individual ou en grupos do programa baseándose no deseño previo das funcións. A maioría do alumnado debería ter unha solución funcional neste tempo, xa que o traballo de análise e deseño previo facilita moito a codificación.
 
-#### Fase 7: Reflexión metacognitiva
+#### Fase 8: Reflexión metacognitiva
 
 - **Tempo estimado**: 10' (en grupo) ou individual (fóra da aula)
 
@@ -147,5 +151,7 @@ Se a implementación é realizada fóra da aula, podería facerse a reflexión a
 
 Pequenas ampliacións que se poderían facer:
 - Implementar un mecanismo para engadir ou eliminar rexistros do CSV e manter o índice actualizado.
-- Implementar as versións secuencial e de acceso directo e comparar tempos de execución con ficheiros de distinto tamaño.
-- Implementar a versión con busca binaria.
+- Implementar a versión con busca binaria, aprovechando o feito de que o CSV está ordenado.
+- Engadir validación e manexo de erros: ID inexistente, ficheiro danado, acceso fora de límites.
+- Permitir buscas por outras columnas (nome, cidade) e crear múltiples índices.
+- Medir experimentalmente a diferenza de rendemento entre busca secuencial e acceso con índice con ficheiros de 100, 1000 e 10.000 liñas.
