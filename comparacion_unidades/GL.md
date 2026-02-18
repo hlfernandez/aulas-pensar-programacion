@@ -33,7 +33,7 @@ Dividimos ao alumnado en grupos visiblemente aleatorios e lanzamos o reto, *como
 
 - **Tempo estimado**: 20'
 
-O obxectivo é que o grupo identifique os pasos que debe seguir o programa para cada comparación, tratando de facer o proceso o máis explícito posible. É importante indicar que nesta fase **non se permite escribir código**, só linguaxe natural, pseudocódigo ou debuxos que expresen o proceso computaciona (por exemplo, para desenvolver os casos de proba anteriores).
+O obxectivo é que o grupo identifique os pasos que debe seguir o programa para cada comparación, tratando de facer o proceso o máis explícito posible. É importante indicar que nesta fase **non se permite escribir código**, só linguaxe natural, pseudocódigo ou debuxos que expresen o proceso computacional (por exemplo, para desenvolver os casos de proba anteriores).
 
 Ao observar como avanzan no pensamento, o profesorado pode ir facendo as seguintes preguntas para fomentar o pensamento:
 
