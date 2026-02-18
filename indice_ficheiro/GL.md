@@ -1,6 +1,6 @@
 ## De ler a indexar
 
-- **Tempo total estimado**: 105'
+- **Tempo total estimado**: 115'
 
 Esta proposta de tarefa ten como obxectivo que o alumnado resolva o problema de acceder a unha fila dun ficheiro CSV a partir do valor dunha columna (un identificador).
 
@@ -52,6 +52,7 @@ id,nome,idade,cidade,nota
 - **Tempo estimado**: 20'
 
 O obxectivo nesta fase é que cada grupo atope algúns IDs concretos no CSV. Por exemplo, poden anotarse estes no taboleiro do docente para ter como referencia e que traten de identificar os pasos necesarios para buscalo:
+
 - 103 (Lucía Fernández) ao principio da lista
 - 115 (Noa Pérez) no medio
 - 125 (Patricia Vázquez) ao final
@@ -113,13 +114,13 @@ Nesta fase o docente pedirá ao alumnado que debuxe o proceso completo: que ocor
 - `crear_indice(lista) → dict_id_a_posicion`
 - `buscar_por_id(id, indice) → liña`
 
-De forma xeral, o esquema do programa sería o seguinte.
+De forma xeral, o esquema do programa sería o seguinte, onde *indexar* e *obtener-fila* poderían ser as funcións xerais (ou scripts, no caso de Python) de entrada ao programa. O alumnado deberá identificar tamén as funcións que inclúen dentro de cada unha delas.
 
 ![Esquema do deseño da sesión](esquema.png)
 
 #### Fase 7: Implementación e proba
 
-- **Tempo estimado**: 20'
+- **Tempo estimado**: 30'
 
 Nesta fase realizarase unha implementación individual ou en grupos do programa baseándose no deseño previo das funcións. A maioría do alumnado debería ter unha solución funcional neste tempo, xa que o traballo de análise e deseño previo facilita moito a codificación.
 
@@ -150,6 +151,7 @@ Se a implementación é realizada fóra da aula, podería facerse a reflexión a
 ### Posibles ampliacións
 
 Pequenas ampliacións que se poderían facer:
+
 - Implementar un mecanismo para engadir ou eliminar rexistros do CSV e manter o índice actualizado.
 - Implementar a versión con busca binaria, aprovechando o feito de que o CSV está ordenado.
 - Engadir validación e manexo de erros: ID inexistente, ficheiro danado, acceso fora de límites.
